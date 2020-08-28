@@ -3,7 +3,10 @@ Chinese Student Association/China Care Slack application that matches people in 
 Better Donut Dates
 
 Coded with JS and Bolt
+
 Tested with Glitch
+
+All code is currently on the glitch branch
 
 ## changelog/timeline
 ### 0.0
