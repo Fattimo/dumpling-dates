@@ -164,7 +164,7 @@ app.message('welcome message', async({message, say}) => {
 			"type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "Welcome to CSA's #dumpling-dates, the healthier, 100% CSA developed alternative to the widely used Slack donut app! The purpose of #dumpling-dates is to connect different members of CSA and allow us to meet new friends!"
+				"text": "Welcome to CSA's #dumpling-dates, the healthier, 100% CSA developed alternative to the widely used Slack donut app! The purpose of #dumpling-dates is to connect different members of CSA and allow us to meet new friends! If you want to see the code for this project, go to <https://github.com/Fattimo/dumpling-dates/tree/glitch|the link here>"
 			}
 		},
 		{
