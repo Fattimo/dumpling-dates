@@ -77,7 +77,22 @@ app.message('make pairings', async({message, say}) => {
   members.splice(members.indexOf(dumplingID), 1)
   if (members.length > 1) {
     let a = 0
-    let b = members.length % 2 == 1 ? 3 : 2
+    let b = 2
+    if (members.length % 2 == 1) {
+      b = 3
+      const pairing = await app.client.conversations.open({
+        token: process.env.SLACK_BOT_TOKEN,
+        users: [...members.slice(a, b)].join(),
+      })
+      console.log(pairing)
+      await app.client.chat.postMessage({
+        token: process.env.SLACK_BOT_TOKEN,
+        channel: pairing["channel"]["id"],
+        text: "ay yo"
+      })
+      a = 3
+      b += 2
+    }
     while (b <= members.length) {
       const pairing = await app.client.conversations.open({
         token: process.env.SLACK_BOT_TOKEN,
