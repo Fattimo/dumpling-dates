@@ -9,7 +9,7 @@ const app = new App({
 
 
 // All the room in the world for your code
-import messages from "./assets/messages.json"
+import messages from "./assets/messages"
 
 app.event('app_home_opened', async ({ event, context }) => {
   try {
