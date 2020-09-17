@@ -171,5 +171,123 @@
                 ]
             }
         ]
-    }
+    },
+    "submitWarning":{
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Submit an image for points in 4 quick easy steps!\n\n 1. Press the button below to send a message which you will submit to\n2. Reply in thread with your image. \n 3. Select the conversation most related to what you're submitting points for.\n 4. Confirm the popup!"
+			}
+		},
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "If you are ready to submit, press the button to the right!"
+			},
+			"accessory": {
+				"type": "button",
+				"text": {
+					"type": "plain_text",
+					"text": "Send Message",
+					"emoji": true
+				},
+				"value": "click_me_123",
+        "action_id": "send_submit"
+			}
+		},
+    {
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "Cancel"
+					},
+					"action_id": "delete_message",
+					"style": "danger",
+					"value": "Cancel"
+				}
+			]
+		},
+		{
+			"type": "divider"
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "plain_text",
+					"text": "Keep in mind that a real message will be sent once you press this button, so don't sent it somewhere random or with a lot of people! Furthermore, I only work 100% of the time in channels that have added the Dumpling-Dates app, so most typically the dms I send you and your private FG group chat, once you add me to that channel. Include a message with your image if you want to give more detail about what you're submitting!",
+					"emoji": true
+				}
+			]
+		}
+	]
+},
+    "submitMessage":{
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Remember to reply in thread to this message with your image! If you want to include more details about your submission, feel free to type a message on your image attachment!"
+			}
+    },
+    {
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": "Select the relevant conversation here. For example, select your FG channel for FG events, or tag your dumpling date for dumpling date submission. After selecting a channel, a pop-up dialog will complete your submission!"
+			},
+			"accessory": {
+				"type": "conversations_select",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Select conversation",
+					"emoji": true
+				},
+        "action_id": "submit_points",
+        "confirm": {
+  "title": {
+      "type": "plain_text",
+      "text": "Form Confirmation"
+  },
+  "text": {
+      "type": "mrkdwn",
+      "text": "Make sure you've selected the correct conversation and replied in thread with an image!"
+  },
+  "confirm": {
+      "type": "plain_text",
+      "text": "Yes!"
+  },
+  "deny": {
+      "type": "plain_text",
+      "text": "No, take me back!"
+  }
+}
+			}
+		},
+		{
+			"type": "actions",
+			"elements": [
+				{
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"emoji": true,
+						"text": "Cancel"
+					},
+					"action_id": "delete_message",
+					"style": "danger",
+					"value": "Cancel"
+				}
+			]
+		}
+	]
+}
 }
