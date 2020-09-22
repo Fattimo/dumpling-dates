@@ -1,16 +1,12 @@
 // Require the Bolt package (github.com/slackapi/bolt)
-const { App } = require("@slack/bolt");
+import { App } from "@slack/bolt";
+import config from "util/config";
+import loadCommands from "util/commands";
 
 const app = new App({
-  token: process.env.SLACK_BOT_TOKEN,
-  signingSecret: process.env.SLACK_SIGNING_SECRET,
-  endpoints: {
-    events: "/slack/events",
-    submit: "/slack/dumpling-submit",
-    pair: "/slack/dumpling-pair",
-    welcome: "/slack/dumpling-welcome",
-    points: "slack/dumpling-points"
-  }
+  token: config.slackBotToken,
+  signingSecret: config.slackSigningSecret,
+  endpoints: config.endpoints
 });
 
 // All the room in the world for your code
